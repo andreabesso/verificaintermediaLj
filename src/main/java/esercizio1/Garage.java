@@ -13,23 +13,23 @@ import java.util.ArrayList;
  */
 public class Garage {
 
-    static ArrayList<Veicolo> garage = new ArrayList<Veicolo>();
+    static ArrayList<Veicolo> veicoli = new ArrayList<Veicolo>();
 
     public static void addVeicolo(Veicolo veicolo) {
         Veicolo v = veicolo;
-        garage.add(v);
+        veicoli.add(v);
     }
 
     public static Veicolo removeVeicolo(int idx) {
-        Veicolo v = garage.get(idx);
-        garage.remove(idx);
+        Veicolo v = veicoli.get(idx);
+        veicoli.remove(idx);
         return v;
     }
 
     public void infoGarage() {
         String ris = "";
         int i=0;
-        for (Veicolo v : garage) {
+        for (Veicolo v : veicoli) {
             ++i;
             System.out.println("Posto "+ i+" " + v.info());
         }
