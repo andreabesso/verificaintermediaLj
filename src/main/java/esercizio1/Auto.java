@@ -34,12 +34,11 @@ Alimentazione alimentazione;
         return alimentazione;
     }
 
+    
+
     @Override
-    public String info() {
-        String ris = "";
-        ris += super.info();
-        ris += "Numero porte: " + getPorte()+", ";
-        ris += "Alimentazione: " + getAlimentazione()+", ";
-        return ris;
+    public String toString() {
+        return super.toString()+"\n" +"Auto{" + "porte=" + porte + ", alimentazione=" + alimentazione + '}';
     }
+        
 }

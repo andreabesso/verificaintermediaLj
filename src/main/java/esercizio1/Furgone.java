@@ -21,13 +21,12 @@ public class Furgone extends Veicolo {
     public int getCapacita() {
         return capacita;
     }
-    
+
     @Override
-    public String info() {
-        String ris = "";
-        ris += super.info();
-        ris += "Capacità: " + getCapacita()+", ";
-        return ris;
+    public String toString() {
+        return super.toString()+"\n" +"Furgone{" + "capacita=" + capacita + '}';
     }
+    
+  
 
 }

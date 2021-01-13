@@ -31,14 +31,10 @@ public class Veicolo {
     public int getCilindrata() {
         return cilindrata;
     }
-    
-    public String info() {
-        String ris = "";
-        ris +="\n";
-        ris += "Marca: " + getMarca()+", ";
-        ris += "Anno: " + getAnno()+", ";
-        ris += "Cilindrata: " + getCilindrata()+", ";
-        return ris;
+
+    @Override
+    public String toString() {
+        return "Veicolo{" + "marca=" + marca + ", anno=" + anno + ", cilindrata=" + cilindrata + '}';
     }
 
 }

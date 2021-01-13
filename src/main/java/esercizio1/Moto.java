@@ -21,12 +21,11 @@ public class Moto extends Veicolo{
         return tempi;
     }
 
-  
     @Override
-       public String info() {
-        String ris = "";
-        ris += super.info();
-        ris += "Tempi: " + getTempi()+", ";
-        return ris;
+    public String toString() {
+        return super.toString()+"\n" +"Moto{" + "tempi=" + tempi + '}';
     }
+
+  
+ 
 }

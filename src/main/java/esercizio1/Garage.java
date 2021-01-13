@@ -31,7 +31,7 @@ public class Garage {
         int i=0;
         for (Veicolo v : veicoli) {
             ++i;
-            System.out.println("Posto "+ i+" " + v.info());
+            System.out.println("Posto "+ i+" " + v.toString());
         }
         
     }
