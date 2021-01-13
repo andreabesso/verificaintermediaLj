@@ -18,7 +18,7 @@ public class Garage {
 
     public Garage(int posti) {
         this.posti = posti;
-        veicoli=new ArrayList<>(posti);
+        veicoli=new ArrayList<Veicolo>(posti);
     }
 
     public int getPosti() {
