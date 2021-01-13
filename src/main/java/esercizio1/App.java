@@ -22,8 +22,9 @@ public class App {
         garage.addVeicolo(veicolo2);
         Moto veicolo3 = new Moto(4, "500", 2012, 1200);
         garage.addVeicolo(veicolo3);
+        garage.infoGarage();
         garage.removeVeicolo(2);
-        System.out.println(garage.infoGarage());
+        garage.infoGarage();
     }
 
 }

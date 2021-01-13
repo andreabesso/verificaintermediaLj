@@ -26,12 +26,14 @@ public class Garage {
         return v;
     }
 
-    public String infoGarage() {
+    public void infoGarage() {
         String ris = "";
+        int i=0;
         for (Veicolo v : garage) {
-            ris += v.info();
+            ++i;
+            System.out.println("Posto "+ i+" " + v.info());
         }
-        return ris;
+        
     }
 
 }
