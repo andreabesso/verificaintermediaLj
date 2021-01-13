@@ -38,7 +38,7 @@ Alimentazione alimentazione;
 
     @Override
     public String toString() {
-        return super.toString()+"\n" +"Auto{" + "porte=" + porte + ", alimentazione=" + alimentazione + '}';
+        return super.toString()+"porte=" + porte + ", alimentazione=" + alimentazione;
     }
         
 }
