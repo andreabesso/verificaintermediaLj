@@ -13,16 +13,16 @@ import java.util.ArrayList;
  */
 public class App {
 
-    static Garage garage=new Garage();
+    static Garage g=new Garage();
 
     public static void main(String[] args) {
         
-        garage.addVeicolo(new Auto("Fiat", 2018, 1200, 4, Auto.Alimentazione.Benzina));
-        garage.addVeicolo(new Furgone(14, "Ducati", 2008, 1600));
-        garage.addVeicolo(new Moto(4, "500", 2012, 1200));
-        garage.infoGarage();
-        garage.removeVeicolo(2);
-        garage.infoGarage();
+        g.addVeicolo(new Auto("Fiat", 2018, 1200, 4, Auto.Alimentazione.Benzina));
+        g.addVeicolo(new Furgone(14, "Ducati", 2008, 1600));
+        g.addVeicolo(new Moto(4, "500", 2012, 1200));
+        g.infoGarage();
+        g.removeVeicolo(2);
+        g.infoGarage();
     }
 
 }
