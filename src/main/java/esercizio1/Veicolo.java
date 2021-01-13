@@ -11,8 +11,8 @@ package esercizio1;
  */
 public class Veicolo {
 
-    String marca;
-    int anno, cilindrata;
+    private String marca;
+    private int anno, cilindrata;
 
     public Veicolo(String marca, int anno, int cilindrata) {
         this.marca = marca;

@@ -11,7 +11,7 @@ package esercizio1;
  */
 public class Auto extends Veicolo {
 
-  public  int porte;
+  private  int porte;
 //   public String alimentazione;
 public static enum Alimentazione{
     Benzina, Disel;

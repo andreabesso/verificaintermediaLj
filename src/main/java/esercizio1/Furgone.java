@@ -11,7 +11,7 @@ package esercizio1;
  */
 public class Furgone extends Veicolo {
 
-    int capacita;
+  private int capacita;
 
     public Furgone(int capacita, String marca, int anno, int cilindrata) {
         super(marca, anno, cilindrata);
