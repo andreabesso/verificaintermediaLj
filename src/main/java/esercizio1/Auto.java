@@ -12,25 +12,30 @@ package esercizio1;
 public class Auto extends Veicolo {
 
   public  int porte;
-   public String alimentazione;
-
-     Auto(int porte, String alimentazione, String marca, int anno, int cilindrata) {
+//   public String alimentazione;
+public static enum Alimentazione{
+    Benzina, Disel;
+}
+Alimentazione alimentazione;
+      public Auto(int porte, Alimentazione alimentazione, String marca, int anno, int cilindrata) {
         super(marca, anno, cilindrata);
         this.porte = porte;
         this.alimentazione = alimentazione;
     }
+
 
     public int getPorte() {
         return porte;
     }
 
 
-    public String getAlimentazione() {
+
+   public Alimentazione getAlimentazione() {
         return alimentazione;
     }
 
     @Override
-   public String info() {
+    public String info() {
         String ris = "";
         ris += super.info();
         ris += "Numero porte: " + getPorte()+", ";
