@@ -13,8 +13,17 @@ import java.util.ArrayList;
  */
 public class Garage {
 
-   
+    int posti;
     static ArrayList<Veicolo> veicoli = new ArrayList<Veicolo>();
+
+    public Garage(int posti) {
+        this.posti = posti;
+        veicoli=new ArrayList<>(posti);
+    }
+
+    public int getPosti() {
+        return posti;
+    }
 
     public static void addVeicolo(Veicolo veicolo) {
         Veicolo v = veicolo;
@@ -28,13 +37,10 @@ public class Garage {
     }
 
     public void infoGarage() {
-        String ris = "";
-        int i = 0;
         System.out.println("Posti Parcheggio");
 
-        for (Veicolo v : veicoli) {
-            ++i;
-            System.out.println("Posto " + i + " " + v.toString());
+        for (int posto=0; posto<veicoli.size();posto++) {
+            System.out.println("Posto " + posto + " " + veicoli.toString());
         }
 
     }

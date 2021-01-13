@@ -11,11 +11,11 @@ package esercizio1;
  */
 public class App {
 
-    static Garage g = new Garage();
+    static Garage g = new Garage(15);
 
     public static void main(String[] args) {
 
-        immetti(g, new Auto("Fiat", 2018, 1200, 4, Auto.Alimentazione.Benzina));
+        g.addVeicolo(new Auto("Fiat", 2018, 1200, 4, Auto.Alimentazione.Benzina));
         g.addVeicolo(new Furgone(14, "Ducati", 2008, 1600));
         g.addVeicolo(new Moto(4, "500", 2012, 1200));
         g.infoGarage();
@@ -23,10 +23,5 @@ public class App {
         g.infoGarage();
     }
     
-    public static void immetti(Garage g, Veicolo v){
-        try{g.addVeicolo(v);
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-    }
+   
 }
