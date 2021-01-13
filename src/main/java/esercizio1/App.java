@@ -5,8 +5,6 @@
  */
 package esercizio1;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author andre
@@ -17,11 +15,18 @@ public class App {
 
     public static void main(String[] args) {
 
-        g.addVeicolo(new Auto("Fiat", 2018, 1200, 4, Auto.Alimentazione.Benzina));
+        immetti(g, new Auto("Fiat", 2018, 1200, 4, Auto.Alimentazione.Benzina));
         g.addVeicolo(new Furgone(14, "Ducati", 2008, 1600));
         g.addVeicolo(new Moto(4, "500", 2012, 1200));
         g.infoGarage();
         g.removeVeicolo(2);
         g.infoGarage();
+    }
+    
+    public static void immetti(Garage g, Veicolo v){
+        try{g.addVeicolo(v);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 }
