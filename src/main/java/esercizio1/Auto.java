@@ -17,7 +17,7 @@ public static enum Alimentazione{
     Benzina, Disel;
 }
 Alimentazione alimentazione;
-      public Auto(int porte, Alimentazione alimentazione, String marca, int anno, int cilindrata) {
+      public Auto( String marca, int anno, int cilindrata, int porte, Alimentazione alimentazione) {
         super(marca, anno, cilindrata);
         this.porte = porte;
         this.alimentazione = alimentazione;
