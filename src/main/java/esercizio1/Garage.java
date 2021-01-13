@@ -28,12 +28,14 @@ public class Garage {
 
     public void infoGarage() {
         String ris = "";
-        int i=0;
+        int i = 0;
+        System.out.println("Situazione Parcheggio");
+
         for (Veicolo v : veicoli) {
             ++i;
-            System.out.println("Posto "+ i+" " + v.toString());
+            System.out.println("Posto " + i + " " + v.toString());
         }
-        
+
     }
 
 }
