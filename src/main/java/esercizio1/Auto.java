@@ -1,3 +1,4 @@
+  
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -14,7 +15,7 @@ public class Auto extends Veicolo {
   private  int porte;
 //   public String alimentazione;
 public static enum Alimentazione{
-    Benzina, Disel;
+    BENZINA, DISEL;
 }
 Alimentazione alimentazione;
       public Auto( String marca, int anno, int cilindrata, int porte, Alimentazione alimentazione) {

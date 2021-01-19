@@ -13,32 +13,54 @@ import java.util.ArrayList;
  */
 public class Sim {
 
-    static ArrayList<Integer> telefonate = new ArrayList<Integer>();
-    int numerotelefono;
-    float credito;
+    private final String numeroSim;
+    private float credito;
+    private ArrayList<Telefonata> elencoTelefonate;
 
-    public Sim(int numerotelefono, float credito) {
-        this.numerotelefono = numerotelefono;
+    public Sim(String numeroSim, float credito) {
+        this.numeroSim = numeroSim;
         this.credito = credito;
-        telefonate = new ArrayList<Integer>();
+        this.elencoTelefonate = new ArrayList<Telefonata>();
     }
 
-    public static ArrayList<Integer> getTelefonate() {
-        return telefonate;
-    }
-
-    public int getNumerotelefono() {
-        return numerotelefono;
+    public String getNumeroSim() {
+        return numeroSim;
     }
 
     public float getCredito() {
         return credito;
     }
 
+    public void addTelefonata(String numeroChiamato, int minuti) {
+        this.elencoTelefonate.add(new Telefonata(numeroChiamato, minuti));
+    }
+
+    public String numRichiamato(String numeroRichiamato) {
+        int numr = 0;
+        for(Telefonata t : elencoTelefonate){
+            if(t.getNumeroChiamato().equals(numeroRichiamato)) {
+                numr++;
+            }
+        }
+        return numr + " telefonate effettuate al numero: " + numeroRichiamato;
+    }
+
+    public String totMin() {
+        int ris = 0;
+        for (int i = 0; i < elencoTelefonate.size(); i++) {
+            ris = ris + elencoTelefonate.get(i).getMinuti();
+        }
+        return "Minuti totali di conversazione: " + ris;
+    }
+
     @Override
     public String toString() {
-        return "Sim{" + "numerotelefono=" + numerotelefono + ", credito=" + credito + '}';
+        String ris = "";
+        ris = "Numero della sim: " + getNumeroSim() + ", Credito: " + getCredito() + " \nElenco telefonate:";
+        for (int i = 0; i < elencoTelefonate.size(); i++) {
+            ris += "\nNumero chiamato; " + elencoTelefonate.get(i).getNumeroChiamato() + ", minuti usati: " + elencoTelefonate.get(i).getMinuti();
+        }
+        return ris;
     }
-    
-    
+
 }

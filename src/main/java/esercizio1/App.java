@@ -14,8 +14,8 @@ public class App {
     static Garage g = new Garage(15);
 
     public static void main(String[] args) {
-
-        g.addVeicolo(new Auto("Fiat", 2018, 1200, 4, Auto.Alimentazione.Benzina));
+        Auto a=new Auto("Fiat", 2018, 1200, 4, Auto.Alimentazione.BENZINA);
+        g.addVeicolo(a);
         g.addVeicolo(new Furgone(14, "Ducati", 2008, 1600));
         g.addVeicolo(new Moto(4, "500", 2012, 1200));
         g.infoGarage();

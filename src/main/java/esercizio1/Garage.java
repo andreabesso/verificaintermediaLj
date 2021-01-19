@@ -17,7 +17,9 @@ public class Garage {
     static ArrayList<Veicolo> veicoli = new ArrayList<Veicolo>();
 
     public Garage(int posti) {
+        //dichiaro quanti posti
         this.posti = posti;
+        //do dimensione max all'arraylist con posti
         veicoli=new ArrayList<Veicolo>(posti);
     }
 
