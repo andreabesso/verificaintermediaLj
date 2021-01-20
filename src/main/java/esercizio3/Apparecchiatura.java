@@ -38,6 +38,10 @@ public class Apparecchiatura {
     public float getTotCosto() {
         return totCosto;
     }
+
+    public static List<Riparazione> getListaRiparazioni() {
+        return listaRiparazioni;
+    }
     
     public void addRiparazione(Riparazione r) {
         this.listaRiparazioni.add(r);
