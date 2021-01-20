@@ -13,8 +13,6 @@ import java.util.ArrayList;
  */
 public class App {
 
-    static ArrayList<Sim> elencoSim = new ArrayList<Sim>();
-
     public static void main(String[] args) {
         Sim s1 = new Sim("3466055887", 25);
         s1.addTelefonata("0125751484", 13);
